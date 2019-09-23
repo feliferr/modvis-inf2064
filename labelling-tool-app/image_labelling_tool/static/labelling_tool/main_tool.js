@@ -248,12 +248,19 @@ var labelling_tool;
                 'Please choose another image (click the unlock button above to find the next unlocked image).</p></div>');
             this._lockNotification.appendTo(toolbar);
             $('<br/>').appendTo(toolbar);
-            this._complete_checkbox = $('<input type="checkbox">Finished</input>').appendTo(toolbar);
+            //----- OLD removed
+            //this._complete_checkbox = $('<input type="checkbox">Finished</input>').appendTo(toolbar);
+            this._complete_checkbox = $('<input type="checkbox" style="display: none"></input>').appendTo(toolbar);
             this._complete_checkbox.change(function (event, ui) {
                 self.root_view.set_complete(event.target.checked);
                 self.queue_push_label_data();
             });
             this._lockableControls = this._lockableControls.add(this._complete_checkbox);
+
+
+
+
+
             //
             // LABEL CLASS SELECTOR AND HIDE LABELS
             //
