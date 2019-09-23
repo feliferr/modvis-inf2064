@@ -166,12 +166,19 @@ var labelling_tool;
             var labelling_area_x_pos = toolbar_width + 10;
             this._lockableControls = $();
             // A <div> element that surrounds the labelling tool
-            var overall_border = $('<div style="border: 1px solid gray; width: ' + this._tool_width + 'px;"/>')
+            var overall_border = $('<div style="border: 1px solid gray; width: 1060px;"/>')
                 .appendTo(element);
+            //---------------- OLD CONFIG --------------
+            // var toolbar_container = $('<div style="position: relative;">').appendTo(overall_border);
+            // var toolbar = $('<div style="position: absolute; width: ' + toolbar_width +
+            //     'px; padding: 4px; display: inline-block; background: #d0d0d0; border: 1px solid #a0a0a0; font-family: sans-serif;"/>').appendTo(toolbar_container);
+            // var labelling_area = $('<div style="width:' + this._labelling_area_width + 'px; margin-left: ' + labelling_area_x_pos + 'px"/>').appendTo(overall_border);
+
+            var labelling_area = $('<div style="width: 1060px; margin-left: 300px; height: 505px"/>').appendTo(overall_border);
             var toolbar_container = $('<div style="position: relative;">').appendTo(overall_border);
-            var toolbar = $('<div style="position: absolute; width: ' + toolbar_width +
-                'px; padding: 4px; display: inline-block; background: #d0d0d0; border: 1px solid #a0a0a0; font-family: sans-serif;"/>').appendTo(toolbar_container);
-            var labelling_area = $('<div style="width:' + this._labelling_area_width + 'px; margin-left: ' + labelling_area_x_pos + 'px"/>').appendTo(overall_border);
+            var toolbar = $('<div style="position: absolute; width: 1050px;' + 
+                ' padding: 4px; display: inline-block; background: #d0d0d0; border: 1px solid #a0a0a0; font-family: sans-serif;"/>').appendTo(toolbar_container);
+
             /*
              *
              *

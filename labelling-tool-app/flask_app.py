@@ -106,9 +106,14 @@ if __name__ == '__main__':
         'tools': {
             'imageSelector': True,
             'labelClassSelector': True,
-            'drawPolyLabel': True,
-            'compositeLabel': True,
+            'drawPolyLabel': False,
+            'compositeLabel': False,
             'deleteLabel': True,
+            'drawPointLabel':False,
+            'groupLabel': True,
+            'brushSelect':False,
+            'drawBoxLabel':False,
+
         }
     }
 
@@ -116,6 +121,7 @@ if __name__ == '__main__':
     @app.route('/')
     def index():
         label_classes_json = [{'name': cls.name, 'human_name': cls.human_name, 'colour': cls.colour}   for cls in label_classes]
+        print("hahahahah........ aqui.....")
         return render_template('labeller_page.jinja2',
                                tool_js_urls=labelling_tool.js_file_urls('/static/labelling_tool/'),
                                label_classes=json.dumps(label_classes_json),
