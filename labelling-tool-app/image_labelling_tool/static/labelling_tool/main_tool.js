@@ -308,7 +308,9 @@ var labelling_tool;
             // Select, brush select, draw poly, composite, group, delete
             //
             $('<p style="background: #b0b0b0;">Tools</p>').appendTo(toolbar);
-            var select_button = $('<button>Select</button>').appendTo(toolbar);
+            // ---- OLD removed
+            //var select_button = $('<button>Select</button>').appendTo(toolbar);
+            var select_button = $('<button style="display: none"></button>').appendTo(toolbar);
             select_button.button().click(function (event) {
                 self.set_current_tool(new labelling_tool.SelectEntityTool(self.root_view));
                 event.preventDefault();
